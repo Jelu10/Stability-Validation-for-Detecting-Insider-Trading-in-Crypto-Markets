@@ -1,0 +1,25 @@
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+.env
+.venv/
+venv/
+ENV/
+env/
+iso_venv/
+
+pip-wheel-metadata/
+.eggs/
+*.egg-info/
+.eggs/
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+data/
+src/build_test_aster.ipynb

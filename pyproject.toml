@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aster-iso-validation"
+version = "0.1.0"
+
+[tool.setuptools]
+py-modules = [
+    "dune_queries",
+    "dune_query_id_sets",
+    "feature_extraction_v2",
+    "isolation_forest",
+    "stability_testing",
+    "wallet_grouping",
+]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["aster_experiments*", "cli*"]
+
+[tool.setuptools.package-data]
+aster_experiments = ["defaults/*.json", "README.md"]

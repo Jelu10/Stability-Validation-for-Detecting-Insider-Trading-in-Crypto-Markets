@@ -1,0 +1,56 @@
+{
+  "experiment": "aster_v2",
+  "token_address": "0x000Ae314E2A2172a039B26378814C252734f556A",
+  "listing_time": "2025-11-19T20:10:00+00:00",
+  "data_dir": "data/aster_v2",
+  "baseline": {
+    "path": "baselinev2.csv",
+    "dataset": "buys",
+    "start": "2025-10-25T00:00:00+00:00",
+    "end": "2025-11-02T00:00:00+00:00",
+    "window_size_days": 8
+  },
+  "windows": {
+    "prelisting": {
+      "anchor_offset_days": 0,
+      "start_offset_days": -1,
+      "end_offset_days": 0,
+      "profit_end_offset_days": 1,
+      "wallet_clustering": true,
+      "download_linked": true
+    },
+    "Wt-1": {
+      "anchor_offset_days": -7,
+      "start_offset_days": -1,
+      "end_offset_days": 0,
+      "profit_end_offset_days": 1,
+      "wallet_clustering": true,
+      "download_linked": true
+    },
+    "Wt-2": {
+      "anchor_offset_days": -14,
+      "start_offset_days": -1,
+      "end_offset_days": 0,
+      "profit_end_offset_days": 1,
+      "wallet_clustering": true,
+      "download_linked": true
+    },
+    "postlisting": {
+      "anchor_offset_days": 0,
+      "start_offset_days": 0,
+      "end_offset_days": 1,
+      "profit_end_offset_days": 2,
+      "wallet_clustering": true,
+      "download_linked": true
+    }
+  },
+  "stability": {
+    "num_seeds": 5,
+    "k_values": [0.0025, 0.005, 0.01, 0.02, 0.05]
+  },
+  "top_feature_sets": [
+    "delta_profit_missingness",
+    "delta"
+  ]
+}
+
